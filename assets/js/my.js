@@ -40,26 +40,19 @@ selectContainer.addEventListener("change", function (e) {
 
 // start
 
-var accordion = document.querySelector(".accordingTittle");
+var accordion = document.getElementsByClassName("accordingContainer");
 
-accordion.addEventListener("change", function (e) {
-  
-  var accordionValue = e.target.value;
-  console.log(accordionValue)
-  var accordionContent = document.querySelectorAll(".accordingContent");
+  for(i = 0; i<accordion.length; i++) {
+    accordion[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
 
-  // accordionContent.forEach((element) => {
-  //   var datid = element.getAttribute("data-id");
-  //   if(datid==accordionValue){
-  //     element.classList.add("infoContentOpen");
-  //   } else{
-  //     element.classList.remove("infoContentOpen");
-  //   }
-  // })
-
-
-  document.querySelector("."+accordionValue).classList.add("infoContentOpen");
-
-})
+  };
 
 // end
+
+// start
+
+
+
+// end 
